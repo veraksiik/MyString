@@ -36,6 +36,12 @@ public:
 		this->word = other.word;
 	}
 
+	MyString operator+(const MyString& other)
+	{
+		this->size = size + other.size+1;
+		strcat_s(this->word, size, other.word);
+		return word;
+	}
 
 
 
